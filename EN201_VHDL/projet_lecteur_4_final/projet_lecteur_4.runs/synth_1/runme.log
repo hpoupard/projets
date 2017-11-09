@@ -1,0 +1,400 @@
+
+*** Running vivado
+    with args -log mp3player.vds -m64 -mode batch -messageDb vivado.pb -notrace -source mp3player.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source mp3player.tcl -notrace
+Command: synth_design -top mp3player -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 266.254 ; gain = 86.785
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mp3player' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:20]
+INFO: [Synth 8-3491] module 'detect_impulsion' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:4' bound to instance 'Reg_B_center' of component 'detect_impulsion' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'detect_impulsion' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'detect_impulsion' (1#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:12]
+INFO: [Synth 8-3491] module 'detect_impulsion' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:4' bound to instance 'Reg_B_down' of component 'detect_impulsion' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:130]
+INFO: [Synth 8-3491] module 'detect_impulsion' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:4' bound to instance 'Reg_B_up' of component 'detect_impulsion' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:137]
+INFO: [Synth 8-3491] module 'detect_impulsion' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:4' bound to instance 'Reg_B_left' of component 'detect_impulsion' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:144]
+INFO: [Synth 8-3491] module 'detect_impulsion' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/detect_impulsion.vhd:4' bound to instance 'Reg_B_right' of component 'detect_impulsion' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:151]
+INFO: [Synth 8-3491] module 'fsm_mp3' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/fsm_mp3.vhd:34' bound to instance 'Ifsm_mp3' of component 'fsm_mp3' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'fsm_mp3' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/fsm_mp3.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'fsm_mp3' (2#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/fsm_mp3.vhd:49]
+INFO: [Synth 8-3491] module 'gestion_freq' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/gestion_freq.vhd:34' bound to instance 'Igestion_freq' of component 'gestion_freq' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'gestion_freq' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/gestion_freq.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'gestion_freq' (3#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/gestion_freq.vhd:41]
+INFO: [Synth 8-3491] module 'cpt_1_9' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/cpt_1_9.vhd:34' bound to instance 'Icpt_1_9' of component 'cpt_1_9' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'cpt_1_9' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/cpt_1_9.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'cpt_1_9' (4#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/cpt_1_9.vhd:42]
+INFO: [Synth 8-3491] module 'cpt_1_599' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/cpt_1_599.vhd:34' bound to instance 'Icpt_1_599' of component 'cpt_1_599' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'cpt_1_599' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/cpt_1_599.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'cpt_1_599' (5#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/cpt_1_599.vhd:44]
+INFO: [Synth 8-3491] module 'transcodeur' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/transcodeur.vhd:53' bound to instance 'trans' of component 'transcodeur' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'transcodeur' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/transcodeur.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'transcodeur' (6#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/transcodeur.vhd:69]
+INFO: [Synth 8-3491] module 'mod8' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mod8.vhd:5' bound to instance 'Imod8' of component 'mod8' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'mod8' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mod8.vhd:15]
+INFO: [Synth 8-226] default block is never used [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mod8.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mod8' (7#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mod8.vhd:15]
+INFO: [Synth 8-3491] module 'mux8' declared at 'C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mux8.vhd:5' bound to instance 'Imux8' of component 'mux8' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:228]
+INFO: [Synth 8-638] synthesizing module 'mux8' [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mux8.vhd:21]
+INFO: [Synth 8-226] default block is never used [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mux8.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'mux8' (8#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mux8.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'mp3player' (9#1) [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/sources_1/new/mp3player.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 300.594 ; gain = 121.125
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 300.594 ; gain = 121.125
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/constrs_1/new/Nexys4_Master.xdc]
+Finished Parsing XDC File [C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.srcs/constrs_1/new/Nexys4_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 609.211 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'fsm_mp3'
+INFO: [Synth 8-5544] ROM "RESTART" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "PLAY_PAUSE" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FORWARD" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "CE_AFFICHAGE" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "CE_PERCEPTION" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                              000 |                              000
+                play_fwd |                              001 |                              001
+                   pause |                              010 |                              011
+                    stop |                              011 |                              100
+                play_bwd |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'fsm_mp3'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   4 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 2     
+	  10 Input      7 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module detect_impulsion 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
+Module fsm_mp3 
+Detailed RTL Component Info : 
++---Muxes : 
+	  12 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
+Module gestion_freq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module cpt_1_9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module cpt_1_599 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module transcodeur 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   7 Input      7 Bit        Muxes := 1     
+	  11 Input      7 Bit        Muxes := 2     
+	  10 Input      7 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module mod8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "CE_AFFICHAGE" won't be mapped to RAM because address size (24) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "CE_PERCEPTION" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 609.211 ; gain = 429.742
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 609.211 ; gain = 429.742
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 609.211 ; gain = 429.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    88|
+|3     |LUT1   |    91|
+|4     |LUT2   |    84|
+|5     |LUT3   |   120|
+|6     |LUT4   |    81|
+|7     |LUT5   |   139|
+|8     |LUT6   |   270|
+|9     |FDRE   |    66|
+|10    |FDSE   |     1|
+|11    |IBUF   |     7|
+|12    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------+-------------------+------+
+|      |Instance        |Module             |Cells |
++------+----------------+-------------------+------+
+|1     |top             |                   |   964|
+|2     |  Icpt_1_599    |cpt_1_599          |    93|
+|3     |  Icpt_1_9      |cpt_1_9            |    18|
+|4     |  Ifsm_mp3      |fsm_mp3            |    16|
+|5     |  Igestion_freq |gestion_freq       |   139|
+|6     |  Imod8         |mod8               |    21|
+|7     |  Reg_B_center  |detect_impulsion   |     2|
+|8     |  Reg_B_down    |detect_impulsion_0 |     1|
+|9     |  Reg_B_left    |detect_impulsion_1 |     1|
+|10    |  Reg_B_right   |detect_impulsion_2 |     1|
+|11    |  Reg_B_up      |detect_impulsion_3 |     1|
+|12    |  trans         |transcodeur        |   467|
++------+----------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 621.633 ; gain = 97.508
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 621.633 ; gain = 442.164
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 621.633 ; gain = 409.273
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.030 . Memory (MB): peak = 621.633 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 10:48:32 2017...
