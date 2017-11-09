@@ -212,8 +212,6 @@ end process;
 
 
 
-
-
 -- this process manages the horizontal synchro using the counters
 process(clk)
 begin
