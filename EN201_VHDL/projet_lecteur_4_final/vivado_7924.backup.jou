@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Oct 18 12:01:34 2017
+# Process ID: 5468
+# Log file: C:/Users/hpoupard/Desktop/projet_lecteur_4/vivado.log
+# Journal file: C:/Users/hpoupard/Desktop/projet_lecteur_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.xpr
+open_hw
+open_hw
+connect_hw_server
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+set_property PROGRAM.FILE {C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.runs/impl_1/mp3player.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.runs/impl_1/mp3player.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+launch_simulation
+source mp3player.tcl
+add_force {/mp3player/CLOCK} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 100 ms
+run 10 ms
+close_sim
+launch_simulation
+source mp3player.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {C:/Users/hpoupard/Desktop/projet_lecteur_4/projet_lecteur_4.runs/impl_1/mp3player.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+restart
+add_force {/mp3player/CLOCK} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 5000 ms
+close_hw_target
+add_force {/mp3player/restart} -radix bin {0 0ns}
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+run 50 ms
+close_sim
+launch_simulation
+source mp3player.tcl
+add_force {/mp3player/CLOCK} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 50 ms
+run all
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+source mp3player.tcl
+add_force {/mp3player/CLOCK} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+run all
+close_sim
+launch_simulation
+source mp3player.tcl
+add_force {/mp3player/CLOCK} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+run all
+close_sim

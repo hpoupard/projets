@@ -1,0 +1,411 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Oct 18 11:53:42 2017
+# Process ID: 8692
+# Log file: C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.runs/synth_1/synthese_totale.vds
+# Journal file: C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source synthese_totale.tcl -notrace
+Command: synth_design -top synthese_totale -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 266.172 ; gain = 86.895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'synthese_totale' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:57]
+INFO: [Synth 8-3491] module 'wav_rom' declared at 'C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/ROM_Sinus.vhd:20' bound to instance 'Iwav_rom' of component 'wav_rom' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'wav_rom' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/ROM_Sinus.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'wav_rom' (1#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/ROM_Sinus.vhd:31]
+INFO: [Synth 8-3491] module 'cmp_addr' declared at 'C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/cmp_addr.vhd:5' bound to instance 'Icmp_addr' of component 'cmp_addr' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'cmp_addr' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/cmp_addr.vhd:14]
+WARNING: [Synth 8-614] signal 'ADDR_IN' is read in the process but is not in the sensitivity list [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/cmp_addr.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'cmp_addr' (2#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/cmp_addr.vhd:14]
+INFO: [Synth 8-3491] module 'horloge_44100Hz' declared at 'C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/horloge_44100Hz.vhd:34' bound to instance 'Ihorloge_44100' of component 'horloge_44100Hz' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'horloge_44100Hz' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/horloge_44100Hz.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'horloge_44100Hz' (3#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/horloge_44100Hz.vhd:40]
+INFO: [Synth 8-3491] module 'pwm' declared at 'C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/pwm.vhd:34' bound to instance 'Ipwm' of component 'pwm' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'pwm' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/pwm.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pwm' (4#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/pwm.vhd:42]
+INFO: [Synth 8-3491] module 'full_UART_recv' declared at 'C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/full_uart_recv.vhd:27' bound to instance 'Ifull_UART_recv' of component 'full_UART_recv' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'full_UART_recv' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/full_uart_recv.vhd:43]
+	Parameter RAM_ADDR_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'UART_recv' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/uart_recv.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'UART_recv' (5#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/uart_recv.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'merger_8b_to_16b' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/merger_8b_to_16b.vhd:20]
+	Parameter BITS bound to: 18 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'merger_8b_to_16b' (6#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/merger_8b_to_16b.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'stop_counter' [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/stop_counter.vhd:17]
+	Parameter BITS bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'stop_counter' (7#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/stop_counter.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'full_UART_recv' (8#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/full_uart_recv.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'synthese_totale' (9#1) [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/sources_1/new/synthese_totale.vhd:57]
+WARNING: [Synth 8-3917] design synthese_totale has port SORTIE_EN driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 303.527 ; gain = 124.250
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 303.527 ; gain = 124.250
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/constrs_1/new/routage.xdc]
+Finished Parsing XDC File [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/constrs_1/new/routage.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 608.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "CLK_44100" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'UART_recv'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "nbbits" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "nbbits" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+           zero_as_input |                              001 |                              001
+           wait_next_bit |                              010 |                              010
+              bit_sample |                              011 |                              011
+            bit_received |                              100 |                              100
+           wait_stop_bit |                              101 |                              101
+        last_bit_is_zero |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'UART_recv'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	             473K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   7 Input     10 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module wav_rom 
+Detailed RTL Component Info : 
++---Registers : 
+	               11 Bit    Registers := 1     
++---RAMs : 
+	             473K Bit         RAMs := 1     
+Module cmp_addr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module horloge_44100Hz 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+Module pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module UART_recv 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   7 Input     10 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 1     
+Module merger_8b_to_16b 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
+Module stop_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "Ihorloge_44100/CLK_44100" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Ifull_UART_recv/receiver/state" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design synthese_totale has port SORTIE_EN driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 608.926 ; gain = 429.648
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-4652] Swapped enable and write-enable on 11 RAM instances of RAM Iwav_rom/memory_reg to conserve power
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++----------------+---------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------+
+|Module Name     | RTL Object          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name         | 
++----------------+---------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------+
+|synthese_totale | Iwav_rom/memory_reg | 64 K x 11(READ_FIRST)  | W |   | 64 K x 11(WRITE_FIRST) |   | R | Port A and B | 0      | 22     | synthese_totale/extram__2 | 
++----------------+---------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+---------------------------+
+
+Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 608.926 ; gain = 429.648
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_0  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_3  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_4  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_5  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_6  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_7  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_8  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_9  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \Iwav_rom/memory_reg_1_10  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |    17|
+|3     |LUT1       |    56|
+|4     |LUT2       |    14|
+|5     |LUT3       |    40|
+|6     |LUT4       |    16|
+|7     |LUT5       |    13|
+|8     |LUT6       |    44|
+|9     |MUXF7      |    10|
+|10    |RAMB36E1   |    11|
+|11    |RAMB36E1_1 |    11|
+|12    |FDCE       |    34|
+|13    |FDRE       |    71|
+|14    |FDSE       |     3|
+|15    |IBUF       |     3|
+|16    |OBUF       |     2|
++------+-----------+------+
+
+Report Instance Areas: 
++------+------------------+-----------------+------+
+|      |Instance          |Module           |Cells |
++------+------------------+-----------------+------+
+|1     |top               |                 |   346|
+|2     |  Icmp_addr       |cmp_addr         |    50|
+|3     |  Ifull_UART_recv |full_UART_recv   |   183|
+|4     |    counter       |stop_counter     |    58|
+|5     |    merger        |merger_8b_to_16b |    21|
+|6     |    receiver      |UART_recv        |   104|
+|7     |  Ihorloge_44100  |horloge_44100Hz  |    44|
+|8     |  Ipwm            |pwm              |    35|
+|9     |  Iwav_rom        |wav_rom          |    28|
++------+------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 608.926 ; gain = 88.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 608.926 ; gain = 429.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 26 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 608.926 ; gain = 396.871
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 608.926 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 18 11:54:04 2017...

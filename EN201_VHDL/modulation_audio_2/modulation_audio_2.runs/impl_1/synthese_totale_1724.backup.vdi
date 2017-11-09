@@ -1,0 +1,573 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed Oct 18 11:25:55 2017
+# Process ID: 8996
+# Log file: C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.runs/impl_1/synthese_totale.vdi
+# Journal file: C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source synthese_totale.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 43 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/constrs_1/new/routage.xdc]
+Finished Parsing XDC File [C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.srcs/constrs_1/new/routage.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.071 . Memory (MB): peak = 487.066 ; gain = 1.348
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 22 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 226e87acd
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 953.617 ; gain = 0.000
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 0 cells.
+Phase 2 Constant Propagation | Checksum: 260300bf4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 953.617 ; gain = 0.000
+
+Phase 3 Sweep
+INFO: [Opt 31-12] Eliminated 47 unconnected nets.
+INFO: [Opt 31-11] Eliminated 0 unconnected cells.
+Phase 3 Sweep | Checksum: 144775d46
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 953.617 ; gain = 0.000
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 953.617 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 144775d46
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 953.617 ; gain = 0.000
+Implement Debug Cores | Checksum: 1e27a12cc
+Logic Optimization | Checksum: 1e27a12cc
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.13 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 22 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 22 newly gated: 11 Total Ports: 44
+Number of Flops added for Enable Generation: 1
+
+Ending PowerOpt Patch Enables Task | Checksum: 1b70b3013
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 982.516 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1b70b3013
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 982.516 ; gain = 28.898
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 982.516 ; gain = 499.770
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 982.516 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.runs/impl_1/synthese_totale_drc_opted.rpt.
+INFO: [#UNDEF] Cannot write hardware definition file as there are no IPI block design hardware handoff files present
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[0] (net: Iwav_rom/Q[0]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[10] (net: Iwav_rom/Q[10]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[11] (net: Iwav_rom/Q[11]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[12] (net: Iwav_rom/Q[12]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[13] (net: Iwav_rom/Q[13]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[14] (net: Iwav_rom/Q[14]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[15] (net: Iwav_rom/Q[15]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[1] (net: Iwav_rom/Q[1]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[2] (net: Iwav_rom/Q[2]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[3] (net: Iwav_rom/Q[3]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[4] (net: Iwav_rom/Q[4]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[5] (net: Iwav_rom/Q[5]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[6] (net: Iwav_rom/Q[6]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[7] (net: Iwav_rom/Q[7]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[8] (net: Iwav_rom/Q[8]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/ADDRARDADDR[9] (net: Iwav_rom/Q[9]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_0 has an input control pin Iwav_rom/memory_reg_0_0/WEA[0] (net: Iwav_rom/WEA[0]) which is driven by a register (Ifull_UART_recv/merger/PACKET_READY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[0] (net: Iwav_rom/Q[0]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[10] (net: Iwav_rom/Q[10]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[11] (net: Iwav_rom/Q[11]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[12] (net: Iwav_rom/Q[12]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[13] (net: Iwav_rom/Q[13]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[14] (net: Iwav_rom/Q[14]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[15] (net: Iwav_rom/Q[15]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[1] (net: Iwav_rom/Q[1]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[2] (net: Iwav_rom/Q[2]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[3] (net: Iwav_rom/Q[3]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[4] (net: Iwav_rom/Q[4]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[5] (net: Iwav_rom/Q[5]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[6] (net: Iwav_rom/Q[6]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[7] (net: Iwav_rom/Q[7]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[8] (net: Iwav_rom/Q[8]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/ADDRARDADDR[9] (net: Iwav_rom/Q[9]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_1 has an input control pin Iwav_rom/memory_reg_0_1/WEA[0] (net: Iwav_rom/WEA[0]) which is driven by a register (Ifull_UART_recv/merger/PACKET_READY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[0] (net: Iwav_rom/Q[0]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[10] (net: Iwav_rom/Q[10]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[11] (net: Iwav_rom/Q[11]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[12] (net: Iwav_rom/Q[12]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[13] (net: Iwav_rom/Q[13]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[14] (net: Iwav_rom/Q[14]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[15] (net: Iwav_rom/Q[15]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[1] (net: Iwav_rom/Q[1]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[2] (net: Iwav_rom/Q[2]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[3] (net: Iwav_rom/Q[3]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[4] (net: Iwav_rom/Q[4]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[5] (net: Iwav_rom/Q[5]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[6] (net: Iwav_rom/Q[6]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[7] (net: Iwav_rom/Q[7]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[8] (net: Iwav_rom/Q[8]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/ADDRARDADDR[9] (net: Iwav_rom/Q[9]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_10 has an input control pin Iwav_rom/memory_reg_0_10/WEA[0] (net: Iwav_rom/WEA[0]) which is driven by a register (Ifull_UART_recv/merger/PACKET_READY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[0] (net: Iwav_rom/Q[0]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[10] (net: Iwav_rom/Q[10]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[11] (net: Iwav_rom/Q[11]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[12] (net: Iwav_rom/Q[12]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[13] (net: Iwav_rom/Q[13]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[14] (net: Iwav_rom/Q[14]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[15] (net: Iwav_rom/Q[15]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[1] (net: Iwav_rom/Q[1]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[2] (net: Iwav_rom/Q[2]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[3] (net: Iwav_rom/Q[3]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[4] (net: Iwav_rom/Q[4]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[5] (net: Iwav_rom/Q[5]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[6] (net: Iwav_rom/Q[6]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[7] (net: Iwav_rom/Q[7]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[8] (net: Iwav_rom/Q[8]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/ADDRARDADDR[9] (net: Iwav_rom/Q[9]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_2 has an input control pin Iwav_rom/memory_reg_0_2/WEA[0] (net: Iwav_rom/WEA[0]) which is driven by a register (Ifull_UART_recv/merger/PACKET_READY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[0] (net: Iwav_rom/Q[0]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[10] (net: Iwav_rom/Q[10]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[11] (net: Iwav_rom/Q[11]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[12] (net: Iwav_rom/Q[12]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[13] (net: Iwav_rom/Q[13]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[14] (net: Iwav_rom/Q[14]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[15] (net: Iwav_rom/Q[15]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[1] (net: Iwav_rom/Q[1]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[2] (net: Iwav_rom/Q[2]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[3] (net: Iwav_rom/Q[3]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[4] (net: Iwav_rom/Q[4]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[5] (net: Iwav_rom/Q[5]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[6] (net: Iwav_rom/Q[6]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[7] (net: Iwav_rom/Q[7]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[8] (net: Iwav_rom/Q[8]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/ADDRARDADDR[9] (net: Iwav_rom/Q[9]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[9]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_3 has an input control pin Iwav_rom/memory_reg_0_3/WEA[0] (net: Iwav_rom/WEA[0]) which is driven by a register (Ifull_UART_recv/merger/PACKET_READY_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[0] (net: Iwav_rom/Q[0]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[10] (net: Iwav_rom/Q[10]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[11] (net: Iwav_rom/Q[11]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[12] (net: Iwav_rom/Q[12]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[13] (net: Iwav_rom/Q[13]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[14] (net: Iwav_rom/Q[14]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[15] (net: Iwav_rom/Q[15]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[1] (net: Iwav_rom/Q[1]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[2] (net: Iwav_rom/Q[2]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[2]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[3] (net: Iwav_rom/Q[3]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[3]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[4] (net: Iwav_rom/Q[4]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[4]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[5] (net: Iwav_rom/Q[5]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[5]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[6] (net: Iwav_rom/Q[6]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[6]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[7] (net: Iwav_rom/Q[7]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC 23-20] Rule violation (REQP-1839) RAMB36 async control check - The RAMB36E1 Iwav_rom/memory_reg_0_4 has an input control pin Iwav_rom/memory_reg_0_4/ADDRARDADDR[8] (net: Iwav_rom/Q[8]) which is driven by a register (Ifull_UART_recv/counter/COMPTEUR_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Common 17-14] Message 'DRC 23-20' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 374 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: 1b3096b2b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 982.516 ; gain = 0.000
+
+Phase 2 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 982.516 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 982.516 ; gain = 0.000
+
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 2.1.1 Pre-Place Cells
+Phase 2.1.1 Pre-Place Cells | Checksum: d8e2b6ce
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 982.516 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2.1.2 IO & Clk Clean Up
+Phase 2.1.2 IO & Clk Clean Up | Checksum: d8e2b6ce
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.854 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 2.1.3 Implementation Feasibility check On IDelay
+Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: d8e2b6ce
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.855 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 2.1.4 Commit IO Placement
+Phase 2.1.4 Commit IO Placement | Checksum: 4d6873af
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.855 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 8e4833bf
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.856 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 2.2 Build Placer Netlist Model
+
+Phase 2.2.1 Place Init Design
+
+Phase 2.2.1.1 Init Lut Pin Assignment
+Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: ffa63647
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.897 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 2.2.1 Place Init Design | Checksum: 17c9fd673
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 2.2 Build Placer Netlist Model | Checksum: 17c9fd673
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 2.3 Constrain Clocks/Macros
+
+Phase 2.3.1 Constrain Global/Regional Clocks
+Phase 2.3.1 Constrain Global/Regional Clocks | Checksum: 17c9fd673
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 2.3 Constrain Clocks/Macros | Checksum: 17c9fd673
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 2 Placer Initialization | Checksum: 17c9fd673
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 3 Global Placement
+Phase 3 Global Placement | Checksum: b0936822
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4 Detail Placement
+
+Phase 4.1 Commit Multi Column Macros
+Phase 4.1 Commit Multi Column Macros | Checksum: b0936822
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.2 Commit Most Macros & LUTRAMs
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 12b8072d1
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.3 Area Swap Optimization
+Phase 4.3 Area Swap Optimization | Checksum: 176adf03a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.4 updateClock Trees: DP
+Phase 4.4 updateClock Trees: DP | Checksum: 176adf03a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.5 Timing Path Optimizer
+Phase 4.5 Timing Path Optimizer | Checksum: b3c7cfa6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.6 Small Shape Detail Placement
+
+Phase 4.6.1 Commit Small Macros & Core Logic
+
+Phase 4.6.1.1 setBudgets
+Phase 4.6.1.1 setBudgets | Checksum: c3b8f22f
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.6.1.2 Commit Slice Clusters
+Phase 4.6.1.2 Commit Slice Clusters | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 4.6 Small Shape Detail Placement | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 4.7 Re-assign LUT pins
+Phase 4.7 Re-assign LUT pins | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 4 Detail Placement | Checksum: 1db7e5721
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5 Post Placement Optimization and Clean-Up
+
+Phase 5.1 PCOPT Shape updates
+Phase 5.1 PCOPT Shape updates | Checksum: 274793914
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5.2 Post Commit Optimization
+
+Phase 5.2.1 updateClock Trees: PCOPT
+Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 274793914
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5.2.2 Post Placement Optimization
+
+Phase 5.2.2.1 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.942. For the most accurate timing information please run report_timing.
+Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 5.2.2 Post Placement Optimization | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 5.2 Post Commit Optimization | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5.3 Sweep Clock Roots: Post-Placement
+Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5.4 Post Placement Cleanup
+Phase 5.4 Post Placement Cleanup | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5.5 Placer Reporting
+
+Phase 5.5.1 Restore STA
+Phase 5.5.1 Restore STA | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 5.5 Placer Reporting | Checksum: 21abb85f3
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+
+Phase 5.6 Final Placement Cleanup
+Phase 5.6 Final Placement Cleanup | Checksum: 24b9dadd1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 24b9dadd1
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+Ending Placer Task | Checksum: 1d97e5ece
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 987.781 ; gain = 5.266
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 987.781 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 987.781 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 987.781 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 987.781 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: eea7ecea
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.082 ; gain = 117.301
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: eea7ecea
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1107.066 ; gain = 119.285
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: eea7ecea
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1114.262 ; gain = 126.480
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 20ac4789e
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1126.563 ; gain = 138.781
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.021  | TNS=0.000  | WHS=-0.204 | THS=-11.392|
+
+Phase 2 Router Initialization | Checksum: 1e286d29d
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1126.563 ; gain = 138.781
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 9c84d6d1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 1f7d1a2fc
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.024  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: d8beaad6
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+Phase 4 Rip-up And Reroute | Checksum: d8beaad6
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 13424e502
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.109  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 13424e502
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 13424e502
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+Phase 5 Delay and Skew Optimization | Checksum: 13424e502
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Update Timing
+Phase 6.1 Update Timing | Checksum: 17b599532
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.109  | TNS=0.000  | WHS=0.098  | THS=0.000  |
+
+Phase 6 Post Hold Fix | Checksum: f15bf693
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.125952 %
+  Global Horizontal Routing Utilization  = 0.130293 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 16d51ae52
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 16d51ae52
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1f3e87364
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.109  | TNS=0.000  | WHS=0.098  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1f3e87364
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1134.785 ; gain = 147.004
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1134.785 ; gain = 147.004
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+53 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1134.785 ; gain = 147.004
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1134.785 ; gain = 0.000
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/hpoupard/Desktop/modulation_audio_2/modulation_audio_2.runs/impl_1/synthese_totale_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 18 11:26:51 2017...

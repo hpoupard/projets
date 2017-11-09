@@ -1,0 +1,1328 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Wed Oct 25 12:16:46 2017
+| Host         : charlton running 64-bit Service Pack 1  (build 7601)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file mp3player_timing_summary_routed.rpt -rpx mp3player_timing_summary_routed.rpx
+| Design       : mp3player
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.14 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 7 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 17 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.056        0.000                      0                 3534        0.181        0.000                      0                 3534        4.500        0.000                       0                   389  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         0.056        0.000                      0                 3534        0.181        0.000                      0                 3534        4.500        0.000                       0                   389  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.056ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.181ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.056ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[17]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_4_0/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.367ns  (logic 0.707ns (16.189%)  route 3.660ns (83.811%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        -0.098ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.721ns = ( 14.721 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[17]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 r  lecteur/Icmp_addr/compteur_44100_reg[17]/Q
+                         net (fo=9, routed)           0.611    11.063    lecteur/Icmp_addr/memory_reg_4_0_0
+    SLICE_X40Y87         LUT3 (Prop_lut3_I1_O)        0.124    11.187 r  lecteur/Icmp_addr/memory_reg_4_0_i_2/O
+                         net (fo=23, routed)          2.013    13.200    lecteur/Iwav_rom/compteur_44100_reg[16]_0
+    SLICE_X61Y125        LUT3 (Prop_lut3_I2_O)        0.124    13.324 r  lecteur/Iwav_rom/memory_reg_4_0_ENBWREN_cooolgate_en_gate_48/O
+                         net (fo=1, routed)           1.036    14.360    lecteur/Iwav_rom/memory_reg_4_0_ENBWREN_cooolgate_en_sig_26
+    RAMB36_X1Y28         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_0/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.536    14.721    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X1Y28         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_0/CLKBWRCLK
+                         clock pessimism              0.173    14.894    
+                         clock uncertainty           -0.035    14.859    
+    RAMB36_X1Y28         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.416    lecteur/Iwav_rom/memory_reg_4_0
+  -------------------------------------------------------------------
+                         required time                         14.416    
+                         arrival time                         -14.360    
+  -------------------------------------------------------------------
+                         slack                                  0.056    
+
+Slack (MET) :             0.188ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[16]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_2_2/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.429ns  (logic 0.707ns (15.963%)  route 3.722ns (84.037%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        0.095ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.908ns = ( 14.908 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X41Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[16]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 r  lecteur/Icmp_addr/compteur_44100_reg[16]/Q
+                         net (fo=9, routed)           0.605    11.056    lecteur/Icmp_addr/memory_reg_4_0
+    SLICE_X41Y84         LUT3 (Prop_lut3_I1_O)        0.124    11.180 r  lecteur/Icmp_addr/memory_reg_2_0_i_2/O
+                         net (fo=23, routed)          2.033    13.213    lecteur/Iwav_rom/compteur_44100_reg[17]
+    SLICE_X11Y46         LUT3 (Prop_lut3_I2_O)        0.124    13.337 r  lecteur/Iwav_rom/memory_reg_2_2_ENBWREN_cooolgate_en_gate_31/O
+                         net (fo=1, routed)           1.084    14.422    lecteur/Iwav_rom/memory_reg_2_2_ENBWREN_cooolgate_en_sig_17
+    RAMB36_X0Y4          RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_2_2/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.722    14.908    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X0Y4          RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_2_2/CLKBWRCLK
+                         clock pessimism              0.180    15.088    
+                         clock uncertainty           -0.035    15.052    
+    RAMB36_X0Y4          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.609    lecteur/Iwav_rom/memory_reg_2_2
+  -------------------------------------------------------------------
+                         required time                         14.609    
+                         arrival time                         -14.422    
+  -------------------------------------------------------------------
+                         slack                                  0.188    
+
+Slack (MET) :             0.259ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[17]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_4_6/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.244ns  (logic 0.707ns (16.659%)  route 3.537ns (83.341%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.801ns = ( 14.801 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[17]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 r  lecteur/Icmp_addr/compteur_44100_reg[17]/Q
+                         net (fo=9, routed)           0.611    11.063    lecteur/Icmp_addr/memory_reg_4_0_0
+    SLICE_X40Y87         LUT3 (Prop_lut3_I1_O)        0.124    11.187 r  lecteur/Icmp_addr/memory_reg_4_0_i_2/O
+                         net (fo=23, routed)          2.093    13.280    lecteur/Iwav_rom/compteur_44100_reg[16]_0
+    SLICE_X62Y128        LUT3 (Prop_lut3_I2_O)        0.124    13.404 r  lecteur/Iwav_rom/memory_reg_4_6_ENBWREN_cooolgate_en_gate_62/O
+                         net (fo=1, routed)           0.833    14.237    lecteur/Iwav_rom/memory_reg_4_6_ENBWREN_cooolgate_en_sig_33
+    RAMB36_X2Y27         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_6/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.616    14.801    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X2Y27         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_6/CLKBWRCLK
+                         clock pessimism              0.173    14.974    
+                         clock uncertainty           -0.035    14.939    
+    RAMB36_X2Y27         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.496    lecteur/Iwav_rom/memory_reg_4_6
+  -------------------------------------------------------------------
+                         required time                         14.496    
+                         arrival time                         -14.237    
+  -------------------------------------------------------------------
+                         slack                                  0.259    
+
+Slack (MET) :             0.286ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[17]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_4_1/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.218ns  (logic 0.707ns (16.760%)  route 3.511ns (83.240%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.802ns = ( 14.802 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[17]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 r  lecteur/Icmp_addr/compteur_44100_reg[17]/Q
+                         net (fo=9, routed)           0.611    11.063    lecteur/Icmp_addr/memory_reg_4_0_0
+    SLICE_X40Y87         LUT3 (Prop_lut3_I1_O)        0.124    11.187 r  lecteur/Icmp_addr/memory_reg_4_0_i_2/O
+                         net (fo=23, routed)          2.558    13.745    lecteur/Iwav_rom/compteur_44100_reg[16]_0
+    SLICE_X80Y122        LUT3 (Prop_lut3_I2_O)        0.124    13.869 r  lecteur/Iwav_rom/memory_reg_4_1_ENBWREN_cooolgate_en_gate_50/O
+                         net (fo=1, routed)           0.342    14.211    lecteur/Iwav_rom/memory_reg_4_1_ENBWREN_cooolgate_en_sig_27
+    RAMB36_X3Y24         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_1/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.617    14.802    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X3Y24         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_1/CLKBWRCLK
+                         clock pessimism              0.173    14.975    
+                         clock uncertainty           -0.035    14.940    
+    RAMB36_X3Y24         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.497    lecteur/Iwav_rom/memory_reg_4_1
+  -------------------------------------------------------------------
+                         required time                         14.497    
+                         arrival time                         -14.211    
+  -------------------------------------------------------------------
+                         slack                                  0.286    
+
+Slack (MET) :             0.366ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[16]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_2_6/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.293ns  (logic 0.707ns (16.470%)  route 3.586ns (83.530%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        0.137ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.950ns = ( 14.950 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X41Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[16]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 r  lecteur/Icmp_addr/compteur_44100_reg[16]/Q
+                         net (fo=9, routed)           0.605    11.056    lecteur/Icmp_addr/memory_reg_4_0
+    SLICE_X41Y84         LUT3 (Prop_lut3_I1_O)        0.124    11.180 r  lecteur/Icmp_addr/memory_reg_2_0_i_2/O
+                         net (fo=23, routed)          1.863    13.044    lecteur/Iwav_rom/compteur_44100_reg[17]
+    SLICE_X59Y49         LUT3 (Prop_lut3_I2_O)        0.124    13.168 r  lecteur/Iwav_rom/memory_reg_2_6_ENBWREN_cooolgate_en_gate_39/O
+                         net (fo=1, routed)           1.118    14.285    lecteur/Iwav_rom/memory_reg_2_6_ENBWREN_cooolgate_en_sig_21
+    RAMB36_X2Y7          RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_2_6/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.764    14.950    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X2Y7          RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_2_6/CLKBWRCLK
+                         clock pessimism              0.180    15.130    
+                         clock uncertainty           -0.035    15.094    
+    RAMB36_X2Y7          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.651    lecteur/Iwav_rom/memory_reg_2_6
+  -------------------------------------------------------------------
+                         required time                         14.651    
+                         arrival time                         -14.285    
+  -------------------------------------------------------------------
+                         slack                                  0.366    
+
+Slack (MET) :             0.381ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[15]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_4_0/ADDRBWRADDR[15]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        3.973ns  (logic 0.459ns (11.554%)  route 3.514ns (88.446%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.096ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.721ns = ( 14.721 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.991ns = ( 9.991 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.632     9.991    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y84         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[15]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y84         FDRE (Prop_fdre_C_Q)         0.459    10.450 r  lecteur/Icmp_addr/compteur_44100_reg[15]/Q
+                         net (fo=136, routed)         3.514    13.963    lecteur/Iwav_rom/ADDRBWRADDR[15]
+    RAMB36_X1Y28         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_0/ADDRBWRADDR[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.536    14.721    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X1Y28         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_0/CLKBWRCLK
+                         clock pessimism              0.173    14.894    
+                         clock uncertainty           -0.035    14.859    
+    RAMB36_X1Y28         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[15])
+                                                     -0.515    14.344    lecteur/Iwav_rom/memory_reg_4_0
+  -------------------------------------------------------------------
+                         required time                         14.344    
+                         arrival time                         -13.963    
+  -------------------------------------------------------------------
+                         slack                                  0.381    
+
+Slack (MET) :             0.385ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[15]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_5_0/ADDRBWRADDR[15]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        3.969ns  (logic 0.459ns (11.565%)  route 3.510ns (88.435%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.095ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.722ns = ( 14.722 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.991ns = ( 9.991 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.632     9.991    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y84         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[15]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y84         FDRE (Prop_fdre_C_Q)         0.459    10.450 r  lecteur/Icmp_addr/compteur_44100_reg[15]/Q
+                         net (fo=136, routed)         3.510    13.960    lecteur/Iwav_rom/ADDRBWRADDR[15]
+    RAMB36_X1Y29         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_5_0/ADDRBWRADDR[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.537    14.722    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X1Y29         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_5_0/CLKBWRCLK
+                         clock pessimism              0.173    14.895    
+                         clock uncertainty           -0.035    14.860    
+    RAMB36_X1Y29         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[15])
+                                                     -0.515    14.345    lecteur/Iwav_rom/memory_reg_5_0
+  -------------------------------------------------------------------
+                         required time                         14.345    
+                         arrival time                         -13.960    
+  -------------------------------------------------------------------
+                         slack                                  0.385    
+
+Slack (MET) :             0.389ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[17]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_4_7/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.223ns  (logic 0.707ns (16.742%)  route 3.516ns (83.258%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        0.090ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.903ns = ( 14.903 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.180ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[17]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 r  lecteur/Icmp_addr/compteur_44100_reg[17]/Q
+                         net (fo=9, routed)           0.611    11.063    lecteur/Icmp_addr/memory_reg_4_0_0
+    SLICE_X40Y87         LUT3 (Prop_lut3_I1_O)        0.124    11.187 r  lecteur/Icmp_addr/memory_reg_4_0_i_2/O
+                         net (fo=23, routed)          2.182    13.369    lecteur/Iwav_rom/compteur_44100_reg[16]_0
+    SLICE_X60Y44         LUT3 (Prop_lut3_I2_O)        0.124    13.493 r  lecteur/Iwav_rom/memory_reg_4_7_ENBWREN_cooolgate_en_gate_64/O
+                         net (fo=1, routed)           0.723    14.215    lecteur/Iwav_rom/memory_reg_4_7_ENBWREN_cooolgate_en_sig_34
+    RAMB36_X1Y8          RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_7/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.717    14.903    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X1Y8          RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_4_7/CLKBWRCLK
+                         clock pessimism              0.180    15.083    
+                         clock uncertainty           -0.035    15.047    
+    RAMB36_X1Y8          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.604    lecteur/Iwav_rom/memory_reg_4_7
+  -------------------------------------------------------------------
+                         required time                         14.604    
+                         arrival time                         -14.216    
+  -------------------------------------------------------------------
+                         slack                                  0.389    
+
+Slack (MET) :             0.413ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[15]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_5_6/ADDRBWRADDR[15]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        4.025ns  (logic 0.459ns (11.404%)  route 3.566ns (88.596%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.805ns = ( 14.805 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.991ns = ( 9.991 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.632     9.991    lecteur/Icmp_addr/CLOCK
+    SLICE_X40Y84         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[15]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y84         FDRE (Prop_fdre_C_Q)         0.459    10.450 r  lecteur/Icmp_addr/compteur_44100_reg[15]/Q
+                         net (fo=136, routed)         3.566    14.015    lecteur/Iwav_rom/ADDRBWRADDR[15]
+    RAMB36_X2Y28         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_5_6/ADDRBWRADDR[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.620    14.805    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X2Y28         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_5_6/CLKBWRCLK
+                         clock pessimism              0.173    14.978    
+                         clock uncertainty           -0.035    14.943    
+    RAMB36_X2Y28         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ADDRBWRADDR[15])
+                                                     -0.515    14.428    lecteur/Iwav_rom/memory_reg_5_6
+  -------------------------------------------------------------------
+                         required time                         14.428    
+                         arrival time                         -14.015    
+  -------------------------------------------------------------------
+                         slack                                  0.413    
+
+Slack (MET) :             0.418ns  (required time - arrival time)
+  Source:                 lecteur/Icmp_addr/compteur_44100_reg[16]/C
+                            (falling edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_0_9/ENBWREN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin fall@5.000ns)
+  Data Path Delay:        3.997ns  (logic 0.707ns (17.690%)  route 3.290ns (82.310%))
+  Logic Levels:           2  (LUT3=2)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.712ns = ( 14.712 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.993ns = ( 9.993 - 5.000 ) 
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    E3                                                0.000     5.000 f  CLOCK (IN)
+                         net (fo=0)                   0.000     5.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     6.482 f  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.780     8.262    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     8.358 f  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.634     9.993    lecteur/Icmp_addr/CLOCK
+    SLICE_X41Y85         FDRE                                         r  lecteur/Icmp_addr/compteur_44100_reg[16]/C  (IS_INVERTED)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y85         FDRE (Prop_fdre_C_Q)         0.459    10.452 f  lecteur/Icmp_addr/compteur_44100_reg[16]/Q
+                         net (fo=9, routed)           0.635    11.087    lecteur/Icmp_addr/memory_reg_4_0
+    SLICE_X45Y85         LUT3 (Prop_lut3_I0_O)        0.124    11.211 r  lecteur/Icmp_addr/memory_reg_0_0_i_2/O
+                         net (fo=23, routed)          1.879    13.090    lecteur/Iwav_rom/compteur_44100_reg[16]
+    SLICE_X62Y119        LUT3 (Prop_lut3_I2_O)        0.124    13.214 r  lecteur/Iwav_rom/memory_reg_0_9_ENBWREN_cooolgate_en_gate_22/O
+                         net (fo=1, routed)           0.776    13.989    lecteur/Iwav_rom/memory_reg_0_9_ENBWREN_cooolgate_en_sig_12
+    RAMB36_X1Y26         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_0_9/ENBWREN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000    10.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         1.527    14.712    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X1Y26         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_0_9/CLKBWRCLK
+                         clock pessimism              0.173    14.885    
+                         clock uncertainty           -0.035    14.850    
+    RAMB36_X1Y26         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_ENBWREN)
+                                                     -0.443    14.407    lecteur/Iwav_rom/memory_reg_0_9
+  -------------------------------------------------------------------
+                         required time                         14.407    
+                         arrival time                         -13.989    
+  -------------------------------------------------------------------
+                         slack                                  0.418    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.181ns  (arrival time - required time)
+  Source:                 Reg_B_left/memoire_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Ifsm_mp3/FSM_sequential_curr_state_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.306ns  (logic 0.186ns (60.853%)  route 0.120ns (39.147%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.891ns
+    Source Clock Delay      (SCD):    1.388ns
+    Clock Pessimism Removal (CPR):    0.469ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.555     1.388    Reg_B_left/CLOCK_IBUF_BUFG
+    SLICE_X41Y74         FDRE                                         r  Reg_B_left/memoire_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y74         FDRE (Prop_fdre_C_Q)         0.141     1.529 f  Reg_B_left/memoire_reg/Q
+                         net (fo=2, routed)           0.120     1.649    Ifsm_mp3/memoire_3
+    SLICE_X43Y74         LUT5 (Prop_lut5_I3_O)        0.045     1.694 r  Ifsm_mp3/FSM_sequential_curr_state[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.694    Ifsm_mp3/FSM_sequential_curr_state[2]_i_1_n_0
+    SLICE_X43Y74         FDRE                                         r  Ifsm_mp3/FSM_sequential_curr_state_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.822     1.891    Ifsm_mp3/CLOCK_IBUF_BUFG
+    SLICE_X43Y74         FDRE                                         r  Ifsm_mp3/FSM_sequential_curr_state_reg[2]/C
+                         clock pessimism             -0.469     1.421    
+    SLICE_X43Y74         FDRE (Hold_fdre_C_D)         0.092     1.513    Ifsm_mp3/FSM_sequential_curr_state_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.513    
+                         arrival time                           1.694    
+  -------------------------------------------------------------------
+                         slack                                  0.181    
+
+Slack (MET) :             0.184ns  (arrival time - required time)
+  Source:                 Icpt_1_599/compteur_599_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Icpt_1_599/compteur_599_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.289ns  (logic 0.186ns (64.361%)  route 0.103ns (35.639%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.938ns
+    Source Clock Delay      (SCD):    1.432ns
+    Clock Pessimism Removal (CPR):    0.492ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.599     1.432    Icpt_1_599/CLOCK_IBUF_BUFG
+    SLICE_X87Y69         FDRE                                         r  Icpt_1_599/compteur_599_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X87Y69         FDRE (Prop_fdre_C_Q)         0.141     1.573 r  Icpt_1_599/compteur_599_reg[7]/Q
+                         net (fo=17, routed)          0.103     1.676    Icpt_1_599/Q[6]
+    SLICE_X86Y69         LUT6 (Prop_lut6_I5_O)        0.045     1.721 r  Icpt_1_599/compteur_599[8]_i_1/O
+                         net (fo=1, routed)           0.000     1.721    Icpt_1_599/p_2_in[8]
+    SLICE_X86Y69         FDRE                                         r  Icpt_1_599/compteur_599_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.869     1.938    Icpt_1_599/CLOCK_IBUF_BUFG
+    SLICE_X86Y69         FDRE                                         r  Icpt_1_599/compteur_599_reg[8]/C
+                         clock pessimism             -0.492     1.445    
+    SLICE_X86Y69         FDRE (Hold_fdre_C_D)         0.092     1.537    Icpt_1_599/compteur_599_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.537    
+                         arrival time                           1.721    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[8]_rep/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Iwav_rom/memory_reg_0_1/ADDRARDADDR[8]
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.382ns  (logic 0.148ns (38.780%)  route 0.234ns (61.220%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.950ns
+    Source Clock Delay      (SCD):    1.399ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.566     1.399    lecteur/Ifull_UART_recv/counter/CLOCK_IBUF_BUFG
+    SLICE_X62Y88         FDCE                                         r  lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[8]_rep/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y88         FDCE (Prop_fdce_C_Q)         0.148     1.547 r  lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[8]_rep/Q
+                         net (fo=16, routed)          0.234     1.781    lecteur/Iwav_rom/ADDRARDADDR[8]
+    RAMB36_X1Y18         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_0_1/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.881     1.950    lecteur/Iwav_rom/CLOCK_IBUF_BUFG
+    RAMB36_X1Y18         RAMB36E1                                     r  lecteur/Iwav_rom/memory_reg_0_1/CLKARDCLK
+                         clock pessimism             -0.490     1.460    
+    RAMB36_X1Y18         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_ADDRARDADDR[8])
+                                                      0.130     1.590    lecteur/Iwav_rom/memory_reg_0_1
+  -------------------------------------------------------------------
+                         required time                         -1.590    
+                         arrival time                           1.781    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+Slack (MET) :             0.202ns  (arrival time - required time)
+  Source:                 lecteur/Ifull_UART_recv/receiver/shift_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Ifull_UART_recv/receiver/dat_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.276ns  (logic 0.164ns (59.419%)  route 0.112ns (40.581%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.893ns
+    Source Clock Delay      (SCD):    1.387ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.554     1.387    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X58Y76         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/shift_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y76         FDRE (Prop_fdre_C_Q)         0.164     1.551 r  lecteur/Ifull_UART_recv/receiver/shift_reg[0]/Q
+                         net (fo=1, routed)           0.112     1.663    lecteur/Ifull_UART_recv/receiver/shift[0]
+    SLICE_X58Y77         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.824     1.893    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X58Y77         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[0]/C
+                         clock pessimism             -0.490     1.402    
+    SLICE_X58Y77         FDRE (Hold_fdre_C_D)         0.059     1.461    lecteur/Ifull_UART_recv/receiver/dat_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.461    
+                         arrival time                           1.663    
+  -------------------------------------------------------------------
+                         slack                                  0.202    
+
+Slack (MET) :             0.204ns  (arrival time - required time)
+  Source:                 lecteur/Ifull_UART_recv/receiver/shift_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Ifull_UART_recv/receiver/dat_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.286ns  (logic 0.164ns (57.366%)  route 0.122ns (42.634%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.012ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.890ns
+    Source Clock Delay      (SCD):    1.387ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.554     1.387    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X58Y73         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/shift_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y73         FDRE (Prop_fdre_C_Q)         0.164     1.551 r  lecteur/Ifull_UART_recv/receiver/shift_reg[3]/Q
+                         net (fo=2, routed)           0.122     1.673    lecteur/Ifull_UART_recv/receiver/shift[3]
+    SLICE_X59Y74         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.821     1.890    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X59Y74         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[3]/C
+                         clock pessimism             -0.490     1.399    
+    SLICE_X59Y74         FDRE (Hold_fdre_C_D)         0.070     1.469    lecteur/Ifull_UART_recv/receiver/dat_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.469    
+                         arrival time                           1.673    
+  -------------------------------------------------------------------
+                         slack                                  0.204    
+
+Slack (MET) :             0.209ns  (arrival time - required time)
+  Source:                 Reg_B_center/memoire_reg/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Ifsm_mp3/FSM_sequential_curr_state_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.313ns  (logic 0.209ns (66.707%)  route 0.104ns (33.293%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.891ns
+    Source Clock Delay      (SCD):    1.388ns
+    Clock Pessimism Removal (CPR):    0.489ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.555     1.388    Reg_B_center/CLOCK_IBUF_BUFG
+    SLICE_X42Y74         FDRE                                         r  Reg_B_center/memoire_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y74         FDRE (Prop_fdre_C_Q)         0.164     1.552 r  Reg_B_center/memoire_reg/Q
+                         net (fo=3, routed)           0.104     1.657    Ifsm_mp3/memoire_1
+    SLICE_X43Y74         LUT6 (Prop_lut6_I3_O)        0.045     1.702 r  Ifsm_mp3/FSM_sequential_curr_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.702    Ifsm_mp3/FSM_sequential_curr_state[1]_i_1_n_0
+    SLICE_X43Y74         FDRE                                         r  Ifsm_mp3/FSM_sequential_curr_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.822     1.891    Ifsm_mp3/CLOCK_IBUF_BUFG
+    SLICE_X43Y74         FDRE                                         r  Ifsm_mp3/FSM_sequential_curr_state_reg[1]/C
+                         clock pessimism             -0.489     1.401    
+    SLICE_X43Y74         FDRE (Hold_fdre_C_D)         0.091     1.492    Ifsm_mp3/FSM_sequential_curr_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.492    
+                         arrival time                           1.702    
+  -------------------------------------------------------------------
+                         slack                                  0.209    
+
+Slack (MET) :             0.211ns  (arrival time - required time)
+  Source:                 lecteur/Ifull_UART_recv/receiver/shift_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Ifull_UART_recv/receiver/dat_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.277ns  (logic 0.164ns (59.162%)  route 0.113ns (40.838%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.894ns
+    Source Clock Delay      (SCD):    1.389ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.556     1.389    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X58Y71         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/shift_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y71         FDRE (Prop_fdre_C_Q)         0.164     1.553 r  lecteur/Ifull_UART_recv/receiver/shift_reg[7]/Q
+                         net (fo=2, routed)           0.113     1.667    lecteur/Ifull_UART_recv/receiver/shift[7]
+    SLICE_X60Y71         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.825     1.894    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X60Y71         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[7]/C
+                         clock pessimism             -0.490     1.403    
+    SLICE_X60Y71         FDRE (Hold_fdre_C_D)         0.052     1.455    lecteur/Ifull_UART_recv/receiver/dat_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.455    
+                         arrival time                           1.667    
+  -------------------------------------------------------------------
+                         slack                                  0.211    
+
+Slack (MET) :             0.214ns  (arrival time - required time)
+  Source:                 Icpt_1_599/compteur_599_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Icpt_1_599/compteur_599_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.318ns  (logic 0.186ns (58.435%)  route 0.132ns (41.565%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.936ns
+    Source Clock Delay      (SCD):    1.430ns
+    Clock Pessimism Removal (CPR):    0.492ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.597     1.430    Icpt_1_599/CLOCK_IBUF_BUFG
+    SLICE_X87Y71         FDRE                                         r  Icpt_1_599/compteur_599_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X87Y71         FDRE (Prop_fdre_C_Q)         0.141     1.571 r  Icpt_1_599/compteur_599_reg[3]/Q
+                         net (fo=19, routed)          0.132     1.704    Icpt_1_599/Q[2]
+    SLICE_X86Y71         LUT6 (Prop_lut6_I5_O)        0.045     1.749 r  Icpt_1_599/compteur_599[4]_i_1/O
+                         net (fo=1, routed)           0.000     1.749    Icpt_1_599/p_2_in[4]
+    SLICE_X86Y71         FDRE                                         r  Icpt_1_599/compteur_599_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.867     1.936    Icpt_1_599/CLOCK_IBUF_BUFG
+    SLICE_X86Y71         FDRE                                         r  Icpt_1_599/compteur_599_reg[4]/C
+                         clock pessimism             -0.492     1.443    
+    SLICE_X86Y71         FDRE (Hold_fdre_C_D)         0.091     1.534    Icpt_1_599/compteur_599_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.534    
+                         arrival time                           1.749    
+  -------------------------------------------------------------------
+                         slack                                  0.214    
+
+Slack (MET) :             0.220ns  (arrival time - required time)
+  Source:                 lecteur/Ifull_UART_recv/receiver/shift_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Ifull_UART_recv/receiver/dat_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.287ns  (logic 0.164ns (57.162%)  route 0.123ns (42.838%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.893ns
+    Source Clock Delay      (SCD):    1.387ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.554     1.387    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X58Y76         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/shift_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y76         FDRE (Prop_fdre_C_Q)         0.164     1.551 r  lecteur/Ifull_UART_recv/receiver/shift_reg[1]/Q
+                         net (fo=2, routed)           0.123     1.674    lecteur/Ifull_UART_recv/receiver/shift[1]
+    SLICE_X58Y77         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.824     1.893    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X58Y77         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_reg[1]/C
+                         clock pessimism             -0.490     1.402    
+    SLICE_X58Y77         FDRE (Hold_fdre_C_D)         0.052     1.454    lecteur/Ifull_UART_recv/receiver/dat_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.454    
+                         arrival time                           1.674    
+  -------------------------------------------------------------------
+                         slack                                  0.220    
+
+Slack (MET) :             0.225ns  (arrival time - required time)
+  Source:                 lecteur/Ifull_UART_recv/receiver/FSM_sequential_state_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lecteur/Ifull_UART_recv/receiver/dat_en_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.329ns  (logic 0.209ns (63.606%)  route 0.120ns (36.394%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.893ns
+    Source Clock Delay      (SCD):    1.389ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.556     1.389    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X56Y70         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/FSM_sequential_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y70         FDRE (Prop_fdre_C_Q)         0.164     1.553 r  lecteur/Ifull_UART_recv/receiver/FSM_sequential_state_reg[0]/Q
+                         net (fo=29, routed)          0.120     1.673    lecteur/Ifull_UART_recv/receiver/state[0]
+    SLICE_X57Y70         LUT4 (Prop_lut4_I1_O)        0.045     1.718 r  lecteur/Ifull_UART_recv/receiver/dat_en_i_1/O
+                         net (fo=1, routed)           0.000     1.718    lecteur/Ifull_UART_recv/receiver/dat_en0
+    SLICE_X57Y70         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_en_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  CLOCK (IN)
+                         net (fo=0)                   0.000     0.000    CLOCK
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  CLOCK_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    CLOCK_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  CLOCK_IBUF_BUFG_inst/O
+                         net (fo=388, routed)         0.824     1.893    lecteur/Ifull_UART_recv/receiver/CLOCK_IBUF_BUFG
+    SLICE_X57Y70         FDRE                                         r  lecteur/Ifull_UART_recv/receiver/dat_en_reg/C
+                         clock pessimism             -0.490     1.402    
+    SLICE_X57Y70         FDRE (Hold_fdre_C_D)         0.091     1.493    lecteur/Ifull_UART_recv/receiver/dat_en_reg
+  -------------------------------------------------------------------
+                         required time                         -1.493    
+                         arrival time                           1.718    
+  -------------------------------------------------------------------
+                         slack                                  0.225    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { CLOCK }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X2Y23  lecteur/Iwav_rom/memory_reg_0_0/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y18  lecteur/Iwav_rom/memory_reg_0_1/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y18  lecteur/Iwav_rom/memory_reg_0_10/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y6   lecteur/Iwav_rom/memory_reg_0_2/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y12  lecteur/Iwav_rom/memory_reg_0_3/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X2Y17  lecteur/Iwav_rom/memory_reg_0_4/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y14  lecteur/Iwav_rom/memory_reg_0_5/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y10  lecteur/Iwav_rom/memory_reg_0_6/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y12  lecteur/Iwav_rom/memory_reg_0_7/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X1Y24  lecteur/Iwav_rom/memory_reg_0_8/CLKARDCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X40Y81  lecteur/Icmp_addr/compteur_44100_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X40Y81  lecteur/Icmp_addr/compteur_44100_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X40Y81  lecteur/Icmp_addr/compteur_44100_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X40Y81  lecteur/Icmp_addr/compteur_44100_reg[3]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X53Y77  lecteur/Ihorloge_44100/compteur_reg[0]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y77  lecteur/Ihorloge_44100/compteur_reg[10]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y77  lecteur/Ihorloge_44100/compteur_reg[7]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y77  lecteur/Ihorloge_44100/compteur_reg[8]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X54Y77  lecteur/Ihorloge_44100/compteur_reg[9]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X43Y74  Ifsm_mp3/FSM_sequential_curr_state_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X87Y71  Icpt_1_599/compteur_599_reg[3]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X86Y71  Icpt_1_599/compteur_599_reg[4]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X85Y70  Igestion_freq/compteur_perception_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X89Y71  Imod8/compteur_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X89Y71  Imod8/compteur_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X89Y71  Imod8/compteur_reg[2]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X54Y83  lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[0]_rep/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X53Y83  lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[0]_rep__2/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X54Y84  lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[10]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X53Y84  lecteur/Ifull_UART_recv/counter/COMPTEUR_reg[12]/C
+
+
+
