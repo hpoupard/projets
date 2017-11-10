@@ -1,0 +1,7 @@
+.ALIASES
+X_U1-1          U1-1(+=0 -=N00201 V+=VCC V-=0 OUT=N00238 ) CN @TEST.SCHEMATIC1(sch_1):INS32@NAT_SEMI.lmv321/MSOP/NS.Normal(chips)
+R_R1            R1(1=N00201 2=N00238 ) CN @TEST.SCHEMATIC1(sch_1):INS160@ANALOG.R.Normal(chips)
+I_I1            I1(+=N00201 -=0 ) CN @TEST.SCHEMATIC1(sch_1):INS185@SOURCE.IDC.Normal(chips)
+V_V1            V1(+=VCC -=0 ) CN @TEST.SCHEMATIC1(sch_1):INS306@SOURCE.VDC.Normal(chips)
+_    _(VCC=VCC)
+.ENDALIASES

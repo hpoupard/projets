@@ -1,0 +1,5 @@
+* source TEST
+X_U1-1         0 N00201 VCC 0 N00238 lmv321/NS
+R_R1         N00201 N00238  3.3Meg TC=0,0 
+I_I1         N00201 0 DC 0Adc  
+V_V1         VCC 0 5
